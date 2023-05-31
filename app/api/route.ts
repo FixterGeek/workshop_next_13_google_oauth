@@ -6,7 +6,7 @@ import { redirect } from "next/navigation";
 export async function GET(request: Request) {
   const url = new URL(request.url);
   const code = url.searchParams.get("code");
-  console.log("Code: ", code);
+
   if (code) {
     const data = await getAccessToken(code);
     const extra = await getExtraData(data.access_token);

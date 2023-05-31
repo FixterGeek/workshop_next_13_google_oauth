@@ -1,7 +1,6 @@
 import { redirect } from "next/navigation";
 import HomeComponent from "./components/Home";
 import { reidrectToGoogle } from "./lib/GoogleOauth2";
-import { useRouter } from "next/navigation";
 import { cookies } from "next/headers";
 
 export default async function Home({
